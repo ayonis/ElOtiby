@@ -44,13 +44,58 @@ $(".phonebtn").mouseover(function(){
     }
 
   }
-//Footer Counter
- /* let counts = setInterval(updated);
-  let upto = 0;
-  function updated(max) {
-      let count = document.getElementById("counter");
-      count.innerHTML = ++upto;
-      if (upto === max) {
-          clearInterval(counts);
-      }
-  }*/
+
+  let upto1 = 0;
+  let upto2 = 0;
+  let upto3 = 0;
+  let upto4 = 0;
+  let content1 = document.getElementById("counter1");
+  let count1 = parseInt(content1.innerText);
+  let content2 = document.getElementById("counter2");
+  let count2 = parseInt(content2.innerText);
+  let content3 = document.getElementById("counter3");
+  let count3 = parseInt(content3.innerText);
+  let content4 = document.getElementById("counter4");
+  let count4 = parseInt(content4.innerText);
+	
+	  
+	let id1 = setInterval(updated, 50 , content1 ,  count1 );
+	let id2 = setInterval(updated , 50 , content2 ,  count2 );
+    let id3 = setInterval(updated , 50 , content3 ,  count3 );
+	 let id4 = setInterval(updated , 50 , content4 ,  count4);
+  function updated(ele , maxCount ) {
+	  
+		if(ele.getAttribute("id") == "counter1" ){
+			ele.innerHTML = ++upto1;
+			if (upto1 > maxCount) {
+		  
+				clearInterval(id1);
+			}
+		}
+		if(ele.getAttribute("id") == "counter2" ){
+			ele.innerHTML = ++upto2;
+			if (upto2 > maxCount) {
+		  
+				clearInterval(id2);
+			}
+		}
+		if(ele.getAttribute("id") == "counter3" ){
+			ele.innerHTML = ++upto3;
+			if (upto3 > maxCount) {
+		  
+				clearInterval(id3);
+			}
+		
+		}
+		
+		if(ele.getAttribute("id") == "counter4" ){
+			ele.innerHTML = ++upto4;
+			if (upto1 > maxCount) {
+		  
+				clearInterval(id4);
+			}
+		}
+     
+      
+  }
+	  
