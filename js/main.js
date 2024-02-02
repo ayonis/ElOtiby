@@ -45,7 +45,7 @@ $(".phonebtn").mouseover(function(){
 
   }
 //Footer Counter
-  let counts = setInterval(updated);
+ /* let counts = setInterval(updated);
   let upto = 0;
   function updated(max) {
       let count = document.getElementById("counter");
@@ -53,4 +53,4 @@ $(".phonebtn").mouseover(function(){
       if (upto === max) {
           clearInterval(counts);
       }
-  }
+  }*/
